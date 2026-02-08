@@ -1,47 +1,129 @@
-# Introduction to GitHub
+# DigiLock Portfolio
 
-_Get started using GitHub in less than an hour._
+A modern, professional Next.js 15 portfolio built with TypeScript and Tailwind CSS.
 
-## Welcome
+## Features
 
-People use GitHub to build some of the most advanced technologies in the world. Whether you’re visualizing data or building a new game, there’s a whole community and set of tools on GitHub that can help you do it even better. GitHub Skills’ “Introduction to GitHub” exercise guides you through everything you need to start contributing in less than an hour.
+- 🎨 **Dark-themed professional design**
+- 🚀 **Hero section** with Call-to-Action buttons
+- 💼 **Services grid** showcasing your offerings
+- 🎥 **Video gallery** supporting both YouTube and local videos
+- 📧 **Contact form** with validation
+- 📱 **Fully responsive** design
+- ⚡ **Fast and optimized** with Next.js 15
 
-- **Who is this for**: New developers, new GitHub users, and students.
-- **What you'll learn**: We'll introduce repositories, branches, commits, and pull requests.
-- **What you'll build**: We'll make a short Markdown file you can use as your [profile README](https://docs.github.com/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme).
-- **Prerequisites**: None. This exercise is a great introduction for your first day on GitHub.
-- **How long**: This exercise takes less than one hour to complete.
+## Project Structure
 
-In this exercise, you will:
+```
+digilock/
+├── app/
+│   ├── page.tsx          # Main portfolio page
+│   ├── layout.tsx        # Root layout with metadata
+│   └── globals.css       # Global styles and animations
+├── components/
+│   ├── Hero.tsx          # Hero section component
+│   ├── Services.tsx      # Services grid component
+│   ├── VideoGallery.tsx  # Video gallery component
+│   ├── Contact.tsx       # Contact form component
+│   └── Footer.tsx        # Footer component
+├── data/
+│   └── data.ts           # Central data file for all content
+└── public/
+    └── videos/           # Place local video files here
+```
 
-1. Create a branch
-2. Commit a file
-3. Open a pull request
-4. Merge your pull request
+## Editing Content
 
-### How to start this exercise
+All content is centralized in `/data/data.ts`. Simply edit this file to update:
 
-Simply copy the exercise to your account, then give your favorite Octocat (Mona) **about 20 seconds** to prepare the first lesson, then **refresh the page**.
+- **Hero Section**: Title, subtitle, description, and CTA buttons
+- **Services**: Service titles, descriptions, and icons
+- **Video Gallery**: YouTube video IDs and local video paths
+- **Contact Form**: Form labels, placeholders, and contact information
+- **Footer**: Company name, social links, and copyright text
 
-[![](https://img.shields.io/badge/Copy%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/new?template_owner=skills&template_name=introduction-to-github&owner=%40me&name=skills-introduction-to-github&description=Exercise:+Introduction+to+GitHub&visibility=public)
+### Example: Updating Hero Text
 
-<details>
-<summary>Having trouble? 🤷</summary><br/>
+```typescript
+export const heroData = {
+  title: "Your Company Name",
+  subtitle: "Your Tagline",
+  description: "Your description...",
+  // ...
+};
+```
 
-When copying the exercise, we recommend the following settings:
+### Example: Adding a Service
 
-- For owner, choose your personal account or an organization to host the repository.
+```typescript
+export const servicesData = {
+  services: [
+    // Existing services...
+    {
+      id: 7,
+      title: "Your New Service",
+      description: "Description of your new service",
+      icon: "🎯", // Use any emoji
+    },
+  ],
+};
+```
 
-- We recommend creating a public repository, since private repositories will use Actions minutes.
+### Example: Adding YouTube Videos
 
-If the exercise isn't ready in 20 seconds, please check the [Actions](../../actions) tab.
+```typescript
+export const videoData = {
+  youtubeVideos: [
+    {
+      id: 1,
+      title: "Your Video Title",
+      videoId: "YOUR_YOUTUBE_VIDEO_ID", // Extract from YouTube URL
+      thumbnail: "https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg",
+    },
+  ],
+};
+```
 
-- Check to see if a job is running. Sometimes it simply takes a bit longer.
+## Getting Started
 
-- If the page shows a failed job, please submit an issue. Nice, you found a bug! 🐛
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-</details>
+2. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+3. **Open your browser:**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## Building for Production
+
+```bash
+npm run build
+npm start
+```
+
+## Customization Tips
+
+- **Colors**: Edit Tailwind classes in components for custom color schemes
+- **Fonts**: Change fonts in `app/layout.tsx`
+- **Animations**: Add custom animations in `app/globals.css`
+- **Local Videos**: Place video files in `public/videos/` and reference them in `data.ts`
+
+## Technologies Used
+
+- **Next.js 15** - React framework
+- **TypeScript** - Type safety
+- **Tailwind CSS 4** - Styling
+- **React 19** - UI library
+
+## License
+
+MIT License - feel free to use this portfolio for your projects!
 
 ---
 
-&copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+&copy; 2024 DigiLock. All rights reserved.
