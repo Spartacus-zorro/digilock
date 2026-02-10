@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ro" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofoliu Spartacus-zorro | Automatizare & Design</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1', // Indigo vibrant
+                        dark: '#0f172a',    // Fundal inchis
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; }
+        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <nav class="fixed w-full z-50 glass">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-indigo-400">Spartacus-zorro</h1>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold">
+                <a href="#servicii" class="hover:text-indigo-400 transition">SERVICII</a>
+                <a href="#contact" class="px-5 py-2 bg-primary rounded-full text-white hover:bg-indigo-600 transition shadow-lg shadow-indigo-500/30">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-40 pb-20 px-6 text-center max-w-4xl mx-auto">
+        <div class="mb-6 inline-block px-4 py-1 rounded-full bg-slate-800 border border-slate-700 text-xs font-bold text-indigo-400 uppercase tracking-wide">
+            Automatizare • Web Design • Marketing
+        </div>
+        <h2 class="text-5xl md:text-7xl font-extrabold mb-8 leading-tight">
+            Transform Ideile în <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500">Sisteme Automate</span>
+        </h2>
+        <p class="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
+            Te ajut să câștigi timp. Construiesc automatizări n8n, site-uri web moderne și strategii video care vând în timp ce dormi.
+        </p>
+        <div class="flex justify-center gap-4">
+            <a href="#contact" class="px-8 py-4 bg-primary text-white font-bold rounded-xl hover:bg-indigo-600 transition shadow-xl shadow-indigo-500/20">Hai să colaborăm</a>
+        </div>
+    </header>
+
+    <section id="servicii" class="py-24 bg-slate-900/50">
+        <div class="max-w-6xl mx-auto px-6">
+            <h3 class="text-3xl font-bold mb-16 text-center">Ce pot face pentru tine?</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-2xl bg-slate-800 border border-slate-700 hover:border-indigo-500 transition hover:-translate-y-1 duration-300">
+                    <div class="w-12 h-12 bg-indigo-500/10 rounded-lg flex items-center justify-center text-2xl mb-6">⚙️</div>
+                    <h4 class="text-xl font-bold mb-3">Automatizare n8n</h4>
+                    <p class="text-slate-400">Conectez aplicațiile tale (CRM, Email, Social) să lucreze singure, eliminând munca manuală.</p>
+                </div>
+                <div class="p-8 rounded-2xl bg-slate-800 border border-slate-700 hover:border-purple-500 transition hover:-translate-y-1 duration-300">
+                    <div class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center text-2xl mb-6">🎨</div>
+                    <h4 class="text-xl font-bold mb-3">Web Design</h4>
+                    <p class="text-slate-400">Site-uri ultra-rapide și responsive care arată impecabil pe mobil și convertesc vizitatorii.</p>
+                </div>
+                <div class="p-8 rounded-2xl bg-slate-800 border border-slate-700 hover:border-pink-500 transition hover:-translate-y-1 duration-300">
+                    <div class="w-12 h-12 bg-pink-500/10 rounded-lg flex items-center justify-center text-2xl mb-6">🎬</div>
+                    <h4 class="text-xl font-bold mb-3">Video Marketing</h4>
+                    <p class="text-slate-400">Editare video dinamică pentru TikTok și Reels, creată să capteze atenția din prima secundă.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="py-20 border-t border-slate-800 text-center">
+        <h2 class="text-3xl font-bold mb-4">Pregătit să începi?</h2>
+        <a href="mailto:contact@spartacus-zorro.com" class="text-xl font-bold text-indigo-400 hover:text-indigo-300 transition">contact@spartacus-zorro.com</a>
+        <p class="mt-8 text-sm text-slate-600">© 2025 Spartacus-zorro. Toate drepturile rezervate.</p>
+    </footer>
+
+</body>
+</html>
