@@ -50,7 +50,7 @@ export default function Services() {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {servicesData.services.map((service, index) => (
+          {servicesData.services.map((service) => (
             <motion.div
               key={service.id}
               variants={itemVariants}
