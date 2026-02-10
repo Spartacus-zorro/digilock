@@ -2,54 +2,91 @@
 // Edit this file to update content across the entire portfolio
 
 export const heroData = {
-  title: "Welcome to DigiLock",
-  subtitle: "Digital Solutions for Modern Businesses",
-  description: "Transform your business with cutting-edge digital solutions. We specialize in web development, mobile apps, and digital marketing.",
-  ctaText: "Get Started",
+  title: "Automatizez, Design-uiesc și Promovez Afacerea Ta în Era AI",
+  subtitle: "Transformă-ți Visul Digital în Realitate",
+  description: "Salvez sute de ore de muncă manuală prin automatizări inteligente, creez experiențe digitale premium și captez atenția prin video marketing strategic.",
+  ctaText: "Începe Acum",
   ctaLink: "#contact",
-  secondaryCtaText: "View Our Work",
-  secondaryCtaLink: "#videos",
+  secondaryCtaText: "Vezi Portofoliul",
+  secondaryCtaLink: "#portfolio",
 };
 
 export const servicesData = {
-  sectionTitle: "Our Services",
-  sectionDescription: "Comprehensive digital solutions tailored to your needs",
+  sectionTitle: "Servicii Premium",
+  sectionDescription: "Soluții digitale care transformă idei în rezultate măsurabile",
   services: [
     {
       id: 1,
-      title: "Web Development",
-      description: "Custom websites and web applications built with modern technologies",
-      icon: "🌐",
+      title: "Automatizare Business",
+      description: "Eficientizează procesele folosind n8n și AI. Salvează sute de ore de muncă manuală și elimină taskurile repetitive din afacerea ta.",
+      icon: "⚡",
     },
     {
       id: 2,
-      title: "Mobile Apps",
-      description: "Native and cross-platform mobile applications for iOS and Android",
-      icon: "📱",
-    },
-    {
-      id: 3,
-      title: "UI/UX Design",
-      description: "Beautiful, intuitive interfaces that users love",
+      title: "Web Design Premium",
+      description: "Experiențe digitale ultra-rapide, responsive și optimizate pentru conversii. Design modern care transformă vizitatori în clienți.",
       icon: "🎨",
     },
     {
+      id: 3,
+      title: "Video Marketing",
+      description: "Strategii video care captează atenția și transformă privitorii în clienți. Conținut care vinde și construiește autoritate.",
+      icon: "🎥",
+    },
+  ],
+};
+
+export const portfolioData = {
+  sectionTitle: "Portofoliu",
+  sectionDescription: "Proiecte care demonstrează excelența și inovația",
+  projects: [
+    {
+      id: 1,
+      title: "Automatizare E-commerce",
+      description: "Sistem complet de automatizare cu n8n pentru procesare comenzi și notificări clienți",
+      category: "Automatizare",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+      tags: ["n8n", "AI", "Automatizare"],
+    },
+    {
+      id: 2,
+      title: "SaaS Platform Design",
+      description: "Platformă SaaS modernă cu design minimalist și UX excepțional",
+      category: "Web Design",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+      tags: ["UI/UX", "React", "Tailwind"],
+    },
+    {
+      id: 3,
+      title: "Video Marketing Campaign",
+      description: "Campanie video care a crescut conversiile cu 300% în 3 luni",
+      category: "Video Marketing",
+      image: "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=600&h=400&fit=crop",
+      tags: ["Video", "Marketing", "Conversii"],
+    },
+    {
       id: 4,
-      title: "Digital Marketing",
-      description: "SEO, social media, and content marketing strategies",
-      icon: "📊",
+      title: "CRM Custom Workflows",
+      description: "Workflow-uri inteligente pentru automatizarea vânzărilor și follow-up clienți",
+      category: "Automatizare",
+      image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&h=400&fit=crop",
+      tags: ["n8n", "CRM", "AI"],
     },
     {
       id: 5,
-      title: "Cloud Solutions",
-      description: "Scalable cloud infrastructure and deployment services",
-      icon: "☁️",
+      title: "Landing Page Premium",
+      description: "Landing page optimizat pentru conversii maximale, încărcare sub 1 secundă",
+      category: "Web Design",
+      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
+      tags: ["Performance", "SEO", "Conversii"],
     },
     {
       id: 6,
-      title: "Consulting",
-      description: "Expert guidance on digital transformation and technology strategy",
-      icon: "💼",
+      title: "Serie Video Educațională",
+      description: "Conținut video de autoritate care a generat 50k+ views și sute de leaduri",
+      category: "Video Marketing",
+      image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&h=400&fit=crop",
+      tags: ["Content", "Authority", "Leads"],
     },
   ],
 };
@@ -82,26 +119,26 @@ export const videoData = {
 };
 
 export const contactData = {
-  sectionTitle: "Get In Touch",
-  sectionDescription: "Let's discuss how we can help your business grow",
+  sectionTitle: "Hai să Discutăm",
+  sectionDescription: "Transformăm conversația într-un plan de acțiune concret",
   form: {
-    namePlaceholder: "Your Name",
-    emailPlaceholder: "Your Email",
-    phonePlaceholder: "Phone Number (Optional)",
-    messagePlaceholder: "Tell us about your project...",
-    submitText: "Send Message",
+    namePlaceholder: "Numele Tău",
+    emailPlaceholder: "Email-ul Tău",
+    phonePlaceholder: "Telefon (Opțional)",
+    messagePlaceholder: "Spune-ne despre proiectul tău...",
+    submitText: "Trimite Mesaj",
   },
   contactInfo: {
-    email: "hello@digilock.com",
-    phone: "+1 (555) 123-4567",
-    address: "123 Business St, Tech City, TC 12345",
+    email: "contact@digilock.ro",
+    phone: "+40 (756) 123-456",
+    address: "București, România",
   },
 };
 
 export const footerData = {
   companyName: "DigiLock",
-  tagline: "Digital Solutions for Modern Businesses",
-  copyright: "© 2024 DigiLock. All rights reserved.",
+  tagline: "Automatizare • Design • Video Marketing",
+  copyright: "© 2024 DigiLock. Toate drepturile rezervate.",
   socialLinks: [
     { name: "GitHub", url: "https://github.com", icon: "github" },
     { name: "LinkedIn", url: "https://linkedin.com", icon: "linkedin" },
