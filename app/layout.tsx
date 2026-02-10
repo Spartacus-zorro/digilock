@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "DigiLock - Digital Solutions Portfolio",
-  description: "Transform your business with cutting-edge digital solutions. Web development, mobile apps, and digital marketing.",
+  title: "DigiLock - Automatizare, Design & Video Marketing",
+  description: "Salvez sute de ore prin automatizări inteligente cu n8n și AI, creez experiențe digitale premium și captez atenția prin video marketing strategic.",
 };
 
 export default function RootLayout({
@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ro">
       <body className="antialiased">
         {children}
       </body>
