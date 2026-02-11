@@ -15,25 +15,25 @@ export default function VideoGallery() {
   };
 
   return (
-    <section className="py-20 bg-black text-white" id="videos">
+    <section className="py-20 bg-gray-50 text-black" id="videos">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             {videoData.sectionTitle}
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             {videoData.sectionDescription}
           </p>
         </div>
 
         {/* YouTube Videos */}
         <div className="mb-12">
-          <h3 className="text-2xl font-semibold mb-6 text-blue-400">YouTube Videos</h3>
+          <h3 className="text-2xl font-semibold mb-6 text-black">YouTube Videos</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {videoData.youtubeVideos.map((video) => (
               <div
                 key={video.id}
-                className="cursor-pointer group relative overflow-hidden rounded-xl"
+                className="cursor-pointer group relative overflow-hidden rounded-xl border-2 border-gray-200 hover:border-black transition-all shadow-soft"
                 onClick={() => openVideo('youtube', video.videoId)}
               >
                 <img
@@ -51,7 +51,7 @@ export default function VideoGallery() {
                   </svg>
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
-                  <h4 className="text-lg font-semibold">{video.title}</h4>
+                  <h4 className="text-lg font-semibold text-white">{video.title}</h4>
                 </div>
               </div>
             ))}
@@ -61,17 +61,17 @@ export default function VideoGallery() {
         {/* Local Videos */}
         {videoData.localVideos.length > 0 && (
           <div>
-            <h3 className="text-2xl font-semibold mb-6 text-purple-400">Project Videos</h3>
+            <h3 className="text-2xl font-semibold mb-6 text-black">Project Videos</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {videoData.localVideos.map((video) => (
                 <div
                   key={video.id}
-                  className="cursor-pointer group relative overflow-hidden rounded-xl"
+                  className="cursor-pointer group relative overflow-hidden rounded-xl border-2 border-gray-200 hover:border-black transition-all shadow-soft"
                   onClick={() => openVideo('local', video.id)}
                 >
-                  <div className="bg-gray-800 h-64 flex items-center justify-center">
+                  <div className="bg-gray-200 h-64 flex items-center justify-center">
                     <svg
-                      className="w-16 h-16 text-gray-600 group-hover:text-white transition-colors"
+                      className="w-16 h-16 text-gray-400 group-hover:text-black transition-colors"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -79,7 +79,7 @@ export default function VideoGallery() {
                     </svg>
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
-                    <h4 className="text-lg font-semibold">{video.title}</h4>
+                    <h4 className="text-lg font-semibold text-white">{video.title}</h4>
                   </div>
                 </div>
               ))}
