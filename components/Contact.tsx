@@ -37,7 +37,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-black to-gray-900 text-white" id="contact">
+    <section className="py-20 bg-white text-black" id="contact">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -46,10 +46,10 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-black">
             {contactData.sectionTitle}
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             {contactData.sectionDescription}
           </p>
         </motion.div>
@@ -61,7 +61,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-xl border border-gray-700"
+            className="bg-gray-50 p-8 rounded-xl border-2 border-gray-200"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
@@ -76,7 +76,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   placeholder={contactData.form.namePlaceholder}
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white"
+                  className="w-full px-4 py-3 bg-white border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent text-black"
                 />
               </div>
 
@@ -92,7 +92,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   placeholder={contactData.form.emailPlaceholder}
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white"
+                  className="w-full px-4 py-3 bg-white border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent text-black"
                 />
               </div>
 
@@ -107,7 +107,7 @@ export default function Contact() {
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder={contactData.form.phonePlaceholder}
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white"
+                  className="w-full px-4 py-3 bg-white border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent text-black"
                 />
               </div>
 
@@ -123,7 +123,7 @@ export default function Contact() {
                   required
                   rows={5}
                   placeholder={contactData.form.messagePlaceholder}
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white resize-none"
+                  className="w-full px-4 py-3 bg-white border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent text-black resize-none"
                 ></textarea>
               </div>
 
@@ -132,7 +132,7 @@ export default function Contact() {
                 disabled={isSubmitting}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-lg transition-all shadow-lg shadow-purple-500/50 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full px-8 py-4 bg-black hover:bg-gray-800 text-white font-semibold rounded-lg transition-all shadow-soft disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? 'Se trimite...' : contactData.form.submitText}
               </motion.button>
@@ -157,8 +157,8 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="space-y-8"
           >
-            <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700">
-              <h3 className="text-2xl font-semibold mb-6">Informații Contact</h3>
+            <div className="bg-gray-50 p-6 rounded-xl border-2 border-gray-200">
+              <h3 className="text-2xl font-semibold mb-6">Informatii Contact</h3>
               
               <div className="space-y-4">
                 <motion.div 
@@ -166,7 +166,7 @@ export default function Contact() {
                   className="flex items-start"
                 >
                   <svg
-                    className="w-6 h-6 text-purple-400 mr-3 mt-1"
+                    className="w-6 h-6 text-black mr-3 mt-1"
                     fill="none"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -178,7 +178,7 @@ export default function Contact() {
                   </svg>
                   <div>
                     <p className="font-semibold">Email</p>
-                    <a href={`mailto:${contactData.contactInfo.email}`} className="text-gray-400 hover:text-purple-400 transition-colors">
+                    <a href={`mailto:${contactData.contactInfo.email}`} className="text-gray-600 hover:text-black transition-colors">
                       {contactData.contactInfo.email}
                     </a>
                   </div>
@@ -189,7 +189,7 @@ export default function Contact() {
                   className="flex items-start"
                 >
                   <svg
-                    className="w-6 h-6 text-purple-400 mr-3 mt-1"
+                    className="w-6 h-6 text-black mr-3 mt-1"
                     fill="none"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -201,7 +201,7 @@ export default function Contact() {
                   </svg>
                   <div>
                     <p className="font-semibold">Telefon</p>
-                    <a href={`tel:${contactData.contactInfo.phone}`} className="text-gray-400 hover:text-purple-400 transition-colors">
+                    <a href={`tel:${contactData.contactInfo.phone}`} className="text-gray-600 hover:text-black transition-colors">
                       {contactData.contactInfo.phone}
                     </a>
                   </div>
@@ -212,7 +212,7 @@ export default function Contact() {
                   className="flex items-start"
                 >
                   <svg
-                    className="w-6 h-6 text-purple-400 mr-3 mt-1"
+                    className="w-6 h-6 text-black mr-3 mt-1"
                     fill="none"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -224,19 +224,19 @@ export default function Contact() {
                     <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                   </svg>
                   <div>
-                    <p className="font-semibold">Locație</p>
-                    <p className="text-gray-400">{contactData.contactInfo.address}</p>
+                    <p className="font-semibold">Locatie</p>
+                    <p className="text-gray-600">{contactData.contactInfo.address}</p>
                   </div>
                 </motion.div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700">
+            <div className="bg-gray-50 p-6 rounded-xl border-2 border-gray-200">
               <h3 className="text-2xl font-semibold mb-4">Program</h3>
-              <div className="space-y-2 text-gray-400">
+              <div className="space-y-2 text-gray-600">
                 <p>Luni - Vineri: 9:00 - 18:00</p>
-                <p>Sâmbătă: 10:00 - 14:00</p>
-                <p>Duminică: Închis</p>
+                <p>Sambata: 10:00 - 14:00</p>
+                <p>Duminica: Inchis</p>
               </div>
             </div>
           </motion.div>
