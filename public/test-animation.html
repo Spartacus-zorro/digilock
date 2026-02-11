@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Logo Animation - Test</title>
+    <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.12.2/build/player/lottie.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        .container {
+            text-align: center;
+            color: white;
+        }
+        #lottie-container {
+            width: 800px;
+            height: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .controls {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            cursor: pointer;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(102, 126, 234, 0.4);
+        }
+        button:active {
+            transform: translateY(0);
+        }
+        .info {
+            margin-top: 20px;
+            color: #b8b8d4;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 Logo Infinit cu Butoane Play</h1>
+        <div id="lottie-container"></div>
+        <div class="controls">
+            <button onclick="animation.play()">▶️ Play</button>
+            <button onclick="animation.pause()">⏸️ Pause</button>
+            <button onclick="animation.stop()">⏹️ Stop</button>
+            <button onclick="animation.setSpeed(0.5)">🐢 Slow</button>
+            <button onclick="animation.setSpeed(1)">⚡ Normal</button>
+            <button onclick="animation.setSpeed(2)">🚀 Fast</button>
+        </div>
+        <div class="info">
+            <p><strong>Animație Lottie:</strong> Logo infinit cu două butoane de play în interior</p>
+            <p>Fișier: <code>timelapse_episode_1.json</code></p>
+        </div>
+    </div>
+
+    <script>
+        // Load the animation
+        var animation = bodymovin.loadAnimation({
+            container: document.getElementById('lottie-container'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'timelapse_episode_1.json'
+        });
+
+        // Log animation loaded
+        animation.addEventListener('DOMLoaded', function() {
+            console.log('Animation loaded successfully!');
+        });
+
+        animation.addEventListener('error', function(error) {
+            console.error('Error loading animation:', error);
+        });
+    </script>
+</body>
+</html>
