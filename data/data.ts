@@ -135,6 +135,95 @@ export const contactData = {
   },
 };
 
+export const arbitrageAgentData = {
+  sectionTitle: "Bitcoin Arbitrage Agent",
+  sectionDescription:
+    "A complex, autonomous AI-powered trading agent that detects and exploits price discrepancies for Bitcoin and other crypto assets across multiple exchanges in real time.",
+  agentStatus: "ACTIVE",
+  supportedAssets: ["BTC", "ETH", "SOL", "BNB", "USDT"],
+  exchanges: [
+    { id: "binance", name: "Binance", color: "from-yellow-500 to-yellow-600" },
+    { id: "coinbase", name: "Coinbase", color: "from-blue-500 to-blue-600" },
+    { id: "kraken", name: "Kraken", color: "from-purple-500 to-purple-600" },
+    { id: "bybit", name: "Bybit", color: "from-orange-500 to-orange-600" },
+    { id: "okx", name: "OKX", color: "from-green-500 to-green-600" },
+  ],
+  simulatedPrices: [
+    { exchange: "Binance", btcPrice: 67_842.15, spread: 0.02 },
+    { exchange: "Coinbase", btcPrice: 67_918.50, spread: 0.03 },
+    { exchange: "Kraken", btcPrice: 67_795.30, spread: 0.02 },
+    { exchange: "Bybit", btcPrice: 67_952.80, spread: 0.04 },
+    { exchange: "OKX", btcPrice: 67_810.60, spread: 0.02 },
+  ],
+  strategies: [
+    {
+      id: 1,
+      name: "Cross-Exchange Arbitrage",
+      description:
+        "Detects price gaps between exchanges and executes simultaneous buy/sell orders to capture the spread.",
+      icon: "🔀",
+    },
+    {
+      id: 2,
+      name: "Triangular Arbitrage",
+      description:
+        "Exploits price mismatches between three trading pairs (e.g., BTC → ETH → USDT → BTC) on the same exchange.",
+      icon: "🔺",
+    },
+    {
+      id: 3,
+      name: "Statistical Arbitrage",
+      description:
+        "Uses historical price correlations and mean-reversion models to anticipate and trade temporary divergences.",
+      icon: "📊",
+    },
+    {
+      id: 4,
+      name: "Flash Arbitrage",
+      description:
+        "Ultra-low-latency execution layer that captures fleeting sub-second opportunities before they close.",
+      icon: "⚡",
+    },
+  ],
+  metrics: [
+    { label: "Avg. Profit / Trade", value: "+0.32%", trend: "up" },
+    { label: "Trades Executed (24h)", value: "2,847", trend: "up" },
+    { label: "Win Rate", value: "94.7%", trend: "up" },
+    { label: "Total PnL (30d)", value: "+$48,320", trend: "up" },
+    { label: "Latency", value: "12 ms", trend: "neutral" },
+    { label: "Active Pairs", value: "38", trend: "neutral" },
+  ],
+  opportunities: [
+    {
+      id: 1,
+      pair: "BTC/USDT",
+      buyExchange: "Kraken",
+      sellExchange: "Bybit",
+      spread: "+0.23%",
+      profit: "+$155.00",
+      status: "LIVE",
+    },
+    {
+      id: 2,
+      pair: "BTC/USDT",
+      buyExchange: "Binance",
+      sellExchange: "Coinbase",
+      spread: "+0.11%",
+      profit: "+$74.50",
+      status: "LIVE",
+    },
+    {
+      id: 3,
+      pair: "BTC/ETH",
+      buyExchange: "OKX",
+      sellExchange: "Binance",
+      spread: "+0.08%",
+      profit: "+$54.20",
+      status: "EXECUTED",
+    },
+  ],
+};
+
 export const footerData = {
   companyName: "DigiLock",
   tagline: "Automatizare • Design • Video Marketing",
