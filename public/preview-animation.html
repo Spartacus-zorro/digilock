@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Logo Animation - SVG Preview</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        .container {
+            text-align: center;
+            color: white;
+        }
+        #svg-container {
+            width: 800px;
+            height: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .info {
+            margin-top: 20px;
+            color: #b8b8d4;
+            font-size: 14px;
+        }
+        
+        /* Animation keyframes */
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+        
+        @keyframes colorChange {
+            0%, 100% {
+                stroke: #6455f7;
+                fill: #6455f7;
+            }
+            33% {
+                stroke: #3b82f6;
+                fill: #3b82f6;
+            }
+            66% {
+                stroke: #ec4899;
+                fill: #ec4899;
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes playPulse {
+            0%, 100% {
+                transform: scale(0.8);
+            }
+            50% {
+                transform: scale(1);
+            }
+        }
+        
+        .infinity-wrapper {
+            animation: rotate 6s linear infinite;
+            transform-origin: center;
+        }
+        
+        .infinity-path {
+            animation: colorChange 6s linear infinite, fadeIn 1s ease-in-out;
+            stroke-width: 12;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+        
+        .play-button {
+            animation: colorChange 6s linear infinite, fadeIn 2s ease-in-out, playPulse 3s ease-in-out infinite;
+            transform-origin: center;
+        }
+        
+        .glow {
+            filter: blur(20px);
+            opacity: 0.3;
+            animation: pulse 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 Logo Infinit cu Butoane Play</h1>
+        <div id="svg-container">
+            <svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+                <!-- Glow effect -->
+                <g class="glow">
+                    <ellipse cx="400" cy="300" rx="250" ry="75" fill="#6455f7"/>
+                </g>
+                
+                <!-- Infinity symbol with animation -->
+                <g class="infinity-wrapper">
+                    <path class="infinity-path" d="
+                        M 300,300
+                        C 300,270 270,250 250,250
+                        C 230,250 200,270 200,300
+                        C 200,330 230,350 250,350
+                        C 270,350 300,330 300,300
+                        Z
+                        M 300,300
+                        C 300,330 330,350 350,350
+                        C 370,350 400,330 400,300
+                        C 400,270 370,250 350,250
+                        C 330,250 300,270 300,300
+                        Z
+                    " transform="translate(100, 0)"/>
+                </g>
+                
+                <!-- Left play button -->
+                <g class="play-button" transform="translate(250, 300)">
+                    <path d="M -20,-30 L 25,0 L -20,30 Z"/>
+                </g>
+                
+                <!-- Right play button -->
+                <g class="play-button" transform="translate(550, 300)">
+                    <path d="M -20,-30 L 25,0 L -20,30 Z"/>
+                </g>
+            </svg>
+        </div>
+        <div class="info">
+            <p><strong>Animație SVG:</strong> Logo infinit cu două butoane de play în interior</p>
+            <p>Fișier sursă: <code>timelapse_episode_1.json</code></p>
+            <p>✨ Animații: Rotație 360°, schimbare de culori, pulsare</p>
+        </div>
+    </div>
+</body>
+</html>
