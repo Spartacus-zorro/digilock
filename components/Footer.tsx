@@ -4,13 +4,13 @@ import { footerData } from '@/data/data';
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-12 border-t border-gray-800">
+    <footer className="bg-white text-black py-12 border-t-2 border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Company Info */}
           <div>
             <h3 className="text-2xl font-bold mb-2">{footerData.companyName}</h3>
-            <p className="text-gray-400">{footerData.tagline}</p>
+            <p className="text-gray-600">{footerData.tagline}</p>
           </div>
 
           {/* Quick Links */}
@@ -18,17 +18,22 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#services" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#services" className="text-gray-600 hover:text-black transition-colors">
                   Services
                 </a>
               </li>
               <li>
-                <a href="#videos" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#portfolio" className="text-gray-600 hover:text-black transition-colors">
                   Portfolio
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#testimonials" className="text-gray-600 hover:text-black transition-colors">
+                  Testimonials
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="text-gray-600 hover:text-black transition-colors">
                   Contact
                 </a>
               </li>
@@ -45,7 +50,7 @@ export default function Footer() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-600 hover:text-black transition-colors"
                   aria-label={social.name}
                 >
                   {social.icon === 'github' && (
@@ -70,7 +75,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
+        <div className="border-t-2 border-gray-200 pt-8 text-center text-gray-600">
           <p>{footerData.copyright}</p>
         </div>
       </div>

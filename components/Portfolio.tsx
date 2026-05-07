@@ -35,7 +35,7 @@ export default function Portfolio() {
   };
 
   return (
-    <section className="py-20 bg-black text-white" id="portfolio">
+    <section className="py-20 bg-white text-black" id="portfolio">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -44,10 +44,10 @@ export default function Portfolio() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-black">
             {portfolioData.sectionTitle}
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             {portfolioData.sectionDescription}
           </p>
         </motion.div>
@@ -64,10 +64,10 @@ export default function Portfolio() {
             <button
               key={category}
               onClick={() => setFilter(category)}
-              className={`px-6 py-2 rounded-full font-semibold transition-all transform hover:scale-105 ${
+              className={`px-6 py-2 rounded-lg font-semibold transition-all transform hover:scale-105 ${
                 filter === category
-                  ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg shadow-purple-500/50'
-                  : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                  ? 'bg-black text-white shadow-soft'
+                  : 'bg-transparent border-2 border-gray-300 text-gray-700 hover:border-black'
               }`}
             >
               {category}
@@ -88,7 +88,7 @@ export default function Portfolio() {
               key={project.id}
               variants={itemVariants}
               whileHover={{ y: -10, transition: { duration: 0.3 } }}
-              className="group relative bg-gray-900 rounded-xl overflow-hidden border border-gray-800 hover:border-purple-500/50 transition-all"
+              className="group relative bg-white rounded-xl overflow-hidden border-2 border-gray-200 hover:border-black transition-all shadow-soft"
             >
               {/* Project Image */}
               <div className="relative h-48 overflow-hidden">
@@ -97,36 +97,33 @@ export default function Portfolio() {
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity"></div>
               </div>
 
               {/* Project Info */}
               <div className="p-6">
                 <div className="mb-2">
-                  <span className="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30">
+                  <span className="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-gray-100 text-gray-700 border border-gray-300">
                     {project.category}
                   </span>
                 </div>
-                <h3 className="text-xl font-semibold mb-2 group-hover:text-purple-400 transition-colors">
+                <h3 className="text-xl font-semibold mb-2 text-black">
                   {project.title}
                 </h3>
-                <p className="text-gray-400 text-sm mb-4">
+                <p className="text-gray-600 text-sm mb-4">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className="text-xs px-2 py-1 rounded bg-gray-800 text-gray-300"
+                      className="text-xs px-2 py-1 rounded bg-gray-100 text-gray-600"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
               </div>
-
-              {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-600/0 to-blue-600/0 group-hover:from-purple-600/10 group-hover:to-blue-600/10 transition-all pointer-events-none"></div>
             </motion.div>
           ))}
         </motion.div>
